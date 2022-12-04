@@ -1,0 +1,11 @@
+@font-face {
+  font-family: "Roboto-Mono";
+  src: local("Roboto-Mono"), url("../fonts//RobotoMono/RobotoMono-VariableFont_wght.ttf");
+}
+
+body {
+  margin: 0;
+  font-family: "Roboto-Mono";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

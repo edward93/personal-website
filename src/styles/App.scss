@@ -1,0 +1,18 @@
+@import "./colors.scss";
+
+.pw-app-container {
+  background-color: $primary-color;
+  color: $text-color;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  & > .pw-app-content {
+    padding: 1rem 1.2rem;
+    display: flex;
+    flex-grow: 1;
+    flex-wrap: wrap;
+
+    color: whitesmoke;
+  }
+}

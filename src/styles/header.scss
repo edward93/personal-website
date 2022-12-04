@@ -1,0 +1,50 @@
+@import "./colors.scss";
+@import "./common.scss";
+
+.pw-app-header {
+  display: flex;
+  justify-content: space-between;
+  color: $text-color;
+
+  padding: 0 1rem;
+
+  text-transform: uppercase;
+  @include shadow();
+
+  & .pw-header-name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  & .pw-header-nav-container {
+    display: flex;
+
+    & .pw-header-nav {
+      display: inherit;
+      justify-content: center;
+      align-items: center;
+
+      & ul {
+        display: inherit;
+        & li {
+          display: inherit;
+          padding: 1rem;
+
+          font-size: 1.3rem;
+
+          & a {
+            text-decoration: none;
+            color: unset;
+
+            &.active {
+              color: $light-color;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // background-color: $secondary-color;
+}

@@ -4,7 +4,7 @@
 .pw-app-header {
   display: flex;
   justify-content: space-between;
-  color: $text-color;
+  color: theme($text-color, $primary-color);
 
   padding: 0 1rem;
 
@@ -37,14 +37,21 @@
             text-decoration: none;
             color: unset;
 
+            &:hover {
+              // color: change-color($color: #000000, $red: 1, $green: 2, $blue: 3, $hue: 0, $saturation: 0%, $lightness: 0%, $alpha: 1.0)
+              color: change-color($color: theme($text-color, $primary-color), $lightness: 70%);
+            }
+
             &.active {
-              color: $light-color;
+              &:hover {
+                opacity: 1;
+              }
+              color: theme($text-color, $highlighted-color);
+              // text-decoration: line-through;
             }
           }
         }
       }
     }
   }
-
-  // background-color: $secondary-color;
 }

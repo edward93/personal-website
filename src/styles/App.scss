@@ -1,8 +1,8 @@
 @import "./colors.scss";
 
 .pw-app-container {
-  background-color: $primary-color;
-  color: $text-color;
+  background-color: theme($bg-color, $primary-color);
+  color: theme($text-color, $primary-color);
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -13,6 +13,6 @@
     flex-grow: 1;
     flex-wrap: wrap;
 
-    color: whitesmoke;
+    color: theme($text-color, $secondary-color);
   }
 }

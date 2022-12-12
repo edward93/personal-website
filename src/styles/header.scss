@@ -4,17 +4,30 @@
 .pw-app-header {
   display: flex;
   justify-content: space-between;
+  background-color: theme($bg-color, $primary-color);
   color: theme($text-color, $primary-color);
 
   padding: 0 1rem;
 
+  // border-bottom: .1rem solid theme($text-color, $primary-color);
+  // @include shadow(change-color($color: theme($text-color, $primary-color), $alpha: .1));
+
   text-transform: uppercase;
-  @include shadow();
 
   & .pw-header-name {
     display: flex;
-    justify-content: center;
+    // justify-content: center;
     align-items: center;
+
+    max-height: 6rem;
+
+    & a {
+      height: 100%;
+    }
+
+    & img {
+      max-height: 100%;
+    }
   }
 
   & .pw-header-nav-container {
@@ -24,30 +37,39 @@
       display: inherit;
       justify-content: center;
       align-items: center;
+      color: theme($text-color, $secondary-color);
 
       & ul {
         display: inherit;
         & li {
           display: inherit;
-          padding: 1rem;
 
           font-size: 1.3rem;
+          font-weight: 900;
 
-          & a {
-            text-decoration: none;
-            color: unset;
+          & > .pw-header-nav-element {
+            // color: theme($text-color, $secondary-color);
 
-            &:hover {
-              // color: change-color($color: #000000, $red: 1, $green: 2, $blue: 3, $hue: 0, $saturation: 0%, $lightness: 0%, $alpha: 1.0)
-              color: change-color($color: theme($text-color, $primary-color), $lightness: 70%);
-            }
+            & a {
+              text-decoration: none;
+              color: unset;
+              padding: 1rem;
 
-            &.active {
               &:hover {
-                opacity: 1;
+                // color: change-color($color: #000000, $red: 1, $green: 2, $blue: 3, $hue: 0, $saturation: 0%, $lightness: 0%, $alpha: 1.0)
+                color: change-color($color: theme($text-color, $highlighted-color), $lightness: 70%);
               }
-              color: theme($text-color, $highlighted-color);
-              // text-decoration: line-through;
+
+              &.active {
+                border-bottom: 0.1rem solid theme($text-color, $primary-color);
+                // background-color: theme($text-color, $primary-color);
+
+                &:hover {
+                  opacity: 1;
+                }
+                color: theme($text-color, $highlighted-color);
+                // text-decoration: line-through;
+              }
             }
           }
         }

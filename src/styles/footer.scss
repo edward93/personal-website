@@ -7,10 +7,10 @@
 
   padding: 0.3em 1em 1em 1em;
 
-  background-color: theme($bg-color, $primary-color);
+  background-color: theme($bg-color, $secondary-color);
   color: theme($text-color, $secondary-color);
 
-  @include shadow(rgba(0, 0, 0, 0.2), "top");
+  // @include shadow(rgba(0, 0, 0, 0.2), "top");
 
   & .pw-footer-app-info {
     display: flex;

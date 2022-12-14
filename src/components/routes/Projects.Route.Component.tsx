@@ -1,11 +1,9 @@
-import { useEffect } from "react";
-
-const titlePrefix = process.env.REACT_APP_TITLE_PREFIX;
+import { useDocumentTitle } from "../../utilities/setDocumentTitle";
 
 const ProjectsComponent = () => {
-  useEffect(() => {
-    document.title = `${titlePrefix} Projects`;
-  }, []);
+  // ignore the returned values since we don't need to update it programmatically
+  useDocumentTitle("Projects");
+  
   return <div className="pw-projects-container">My Projects</div>;
 };
 

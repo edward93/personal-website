@@ -1,0 +1,11 @@
+@import "./colors.scss";
+@import "./common.scss";
+
+.pw-main-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  & .pw-main-page-title {
+    font-weight: 900;
+  }
+}

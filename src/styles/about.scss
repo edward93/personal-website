@@ -1,0 +1,37 @@
+.pw-about-container {
+  display: flex;
+  flex-direction: column;
+
+  & .pw-about-title {
+    display: flex;
+    padding: 0 2rem;
+    justify-content: center;
+  }
+
+  & .pw-about-content {
+    display: flex;
+    padding: 0 3rem;
+
+    flex-direction: column;
+
+    & .pw-about-section-summary {
+      display: flex;
+    }
+
+    & .pw-about-mid-container {
+      display: flex;
+
+      & .pw-about-section-exp {
+        flex-basis: 0;
+        flex-grow: 1;
+
+        // padding: 1rem;
+      }
+
+      & .pw-about-section-skills {
+        flex-basis: 0;
+        flex-grow: 1;
+      }
+    }
+  }
+}

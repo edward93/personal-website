@@ -1,3 +1,22 @@
+@import "./colors.scss";
+
+@mixin section-header {
+  & .pw-about-section-header {
+    margin-top: 0;
+    padding: 0.5rem 0;
+  }
+}
+
+@mixin section-content {
+  & .pw-about-section-content {
+    padding: 0.5rem 1rem;
+
+    & h4 {
+      margin-bottom: 0;
+    }
+  }
+}
+
 .pw-about-container {
   display: flex;
   flex-direction: column;
@@ -16,21 +35,35 @@
 
     & .pw-about-section-summary {
       display: flex;
+      flex-direction: column;
+
+      padding: 1rem 3rem;
     }
 
     & .pw-about-mid-container {
       display: flex;
 
-      & .pw-about-section-exp {
-        flex-basis: 0;
-        flex-grow: 1;
+      flex-wrap: wrap;
 
-        // padding: 1rem;
+      & .pw-about-section-exp {
+        background-color: theme($bg-color, $secondary-color);
+        flex: 1 1 31rem;
+
+        padding: 1rem 0.8rem;
+        margin: 0.3rem 0.3rem;
+        @include section-header;
+        @include section-content;
       }
 
       & .pw-about-section-skills {
-        flex-basis: 0;
-        flex-grow: 1;
+        background-color: theme($bg-color, $secondary-color);
+        flex: 1 1 31rem;
+
+
+        padding: 1rem 0.8rem;
+        margin: 0.3rem 0.3rem;
+        @include section-header;
+        @include section-content;
       }
     }
   }

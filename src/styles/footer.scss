@@ -7,7 +7,7 @@
 
   padding: 0.3em 1em 1em 1em;
 
-  background-color: theme($bg-color, $secondary-color);
+  background-color: theme($bg-color, $primary-color);
   color: theme($text-color, $secondary-color);
 
   // @include shadow(rgba(0, 0, 0, 0.2), "top");

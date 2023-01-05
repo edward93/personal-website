@@ -1,5 +1,5 @@
 import { useDocumentTitle } from "../../utilities/setDocumentTitle";
-
+import SkillsChart from "../about/SkillsChart.Component";
 import "../../styles/about.scss";
 
 const AboutComponent = () => {
@@ -33,11 +33,10 @@ const AboutComponent = () => {
           <section className="pw-about-section-skills">
             <h2 className="pw-about-section-header">Skills</h2>
             <div className="pw-about-section-content">
-              <p>
-                .NET, ReactJS, C#, JavaScript, TypeScript, SQL, Algorithms and Data Structures, TDD, BDD, DDD,,
-                Microservices, SOLID, Design Patterns, Agile, Scrum, Kanban, Machine Learning, PostgreSQL, SQL Server,
-                Oracle, Azure, AWS
-              </p>
+              <SkillsChart />
+              {/* .NET, ReactJS, C#, JavaScript, TypeScript, SQL, Algorithms and Data Structures, TDD, BDD, DDD,
+              Microservices, SOLID, Design Patterns, Agile, Scrum, Kanban, Machine Learning, PostgreSQL, SQL Server,
+              Oracle, Azure, AWS */}
             </div>
           </section>
         </div>

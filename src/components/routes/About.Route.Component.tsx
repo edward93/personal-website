@@ -1,3 +1,5 @@
+import { Timeline, Text } from "@mantine/core";
+
 import { useDocumentTitle } from "../../utilities/setDocumentTitle";
 import SkillsChart from "../about/SkillsChart.Component";
 import "../../styles/about.scss";
@@ -19,6 +21,20 @@ const AboutComponent = () => {
         <div className="pw-about-mid-container">
           <section className="pw-about-section-exp">
             <h2 className="pw-about-section-header">Past Experience</h2>
+            <Timeline align="right">
+              <Timeline.Item title="03/2012 | Jr Software Engineer" bulletSize={24}>
+                <Text size="sm">Instigate CJSC</Text>
+                <Text size="xs" mt={4}>
+                  Creating and maintaining software for operating drones using C/C++
+                </Text>
+              </Timeline.Item>
+              <Timeline.Item title="02/2014 | Software Engineer" bulletSize={24}>
+                <Text size="sm">EPAM systems</Text>
+                <Text size="xs" mt={4}>
+                  Ruby on Rails backend developer
+                </Text>
+              </Timeline.Item>
+            </Timeline>
             <div className="pw-about-section-content">
               <h4>Lead Software Engineer | 02/2019 - Present | EPAM systems | Boston, MA</h4>
               <p>Full stack developer (.NET + React JS)</p>

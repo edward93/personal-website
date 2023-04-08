@@ -1,3 +1,4 @@
+import { MantineProvider } from "@mantine/core";
 import { Outlet } from "react-router-dom";
 
 import Header from "./layout/Header.Component";
@@ -7,13 +8,15 @@ import "../styles/App.scss";
 
 function App() {
   return (
-    <div className="pw-app-container">
-      <Header />
-      <div className="pw-app-content">
-        <Outlet />
+    <MantineProvider theme={{ colorScheme: "dark" }}>
+      <div className="pw-app-container">
+        <Header />
+        <div className="pw-app-content">
+          <Outlet />
+        </div>
+        <Footer />
       </div>
-      <Footer />
-    </div>
+    </MantineProvider>
   );
 }
 

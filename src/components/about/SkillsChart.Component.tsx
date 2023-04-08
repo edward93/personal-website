@@ -31,7 +31,7 @@ const skillsChartData: ChartData[] = [
   { label: "JavaScript", value: 8 },
   { label: "TypeScript", value: 6 },
   { label: "SQL", value: 10 },
-  { label: "Algorithms and Data Structures", value: 8 },
+  { label: "Algorithms & DS", value: 8, title: "Algorithms and Data Structures" },
   { label: "TDD", value: 6 },
   { label: "BDD", value: 4 },
   { label: "DDD", value: 4 },
@@ -54,7 +54,7 @@ const createChart = (
   data: ChartData[],
   {
     value = (c: any) => c.value,
-    title = (c: any) => c.label,
+    title = (c: any) => c.title || c.label,
     label = (c: any) => c.label,
     width = 500,
     height = 500,
